@@ -1,5 +1,7 @@
 package piscine
+
 import "fmt"
+
 func QuadA(x, y int) {
 	if x > 0 && y > 0 {
 		for i := 0; i < y; i++ {
