@@ -1,26 +1,26 @@
-package main
+package piscine
 
 import "fmt"
-import "strings"
 
-func QuadA(x,y int) {
-
+func QuadA(x, y int) {
 	if x > 0 && y > 0 {
-
-		if x == 1 {
-			fmt.Println ("o")
-		} else {
-			fmt.Println ("o" + strings.Repeat("-", (x-2)) + "o")
+		for i := 0; i < y; i++ {
+			for j := 0; j < x; j++ {
+				if i == 0 || i == y-1 {
+					if j == 0 || j == x-1 {
+						fmt.Print("o")
+					} else {
+						fmt.Print("-")
+					}
+				} else {
+					if j == 0 || j == x-1 {
+						fmt.Print("|")
+					} else {
+						fmt.Print(" ")
+					}
+				}
+			}
+			fmt.Println()
 		}
-		for i := 0 ; i < y-2 ; i++ {
-			fmt.Println ("|" + strings.Repeat(" ", (x-2)) + "|")
-		}
-		}
-	
 	}
-		
-
-func main() {
-	QuadA(1,1)
 }
-
