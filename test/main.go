@@ -4,7 +4,7 @@ import "fmt"
 
 func main() {
 	numPro := 'e'
-	x := -5
+	x := 5
 	y := 1
 
 	switch numPro {
