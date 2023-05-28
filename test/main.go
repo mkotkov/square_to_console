@@ -3,19 +3,23 @@ package main
 import "fmt"
 
 func main() {
-	numPro := 'b'
+	numPro := 'e'
+	x := -5
+	y := 1
 
 	switch numPro {
 	case 'a':
-		QuadA(5, 3)
+		QuadA(x, y)
 	case 'b':
-		QuadB(5, 3)
+		QuadB(x, y)
 	case 'c':
-		QuadC(5, 3)
+		QuadC(x, y)
 	case 'd':
-		QuadD(5, 3)
+		QuadD(x, y)
 	case 'e':
-		QuadE(5, 3)
+		QuadE(x, y)
+	default:
+		fmt.Println("No such program exists!")
 	}
 }
 
@@ -39,6 +43,8 @@ func QuadA(x, y int) {
 			}
 			fmt.Println()
 		}
+	} else {
+		fmt.Println("The dimensions must be positive.")
 	}
 }
 
@@ -119,7 +125,7 @@ func QuadD(x, y int) {
 
 func QuadE(x, y int) {
 	if x <= 0 || y <= 0 {
-		return // if x or y is negative or zero, do not print anything
+		fmt.Print("The dimensions must be positive.") // if x or y is negative or zero, do not print anything
 	}
 
 	for iy := 0; iy < y; iy++ { // y-axis
